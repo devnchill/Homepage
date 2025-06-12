@@ -1,0 +1,47 @@
+@import "./reboot.css";
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "HandleRegular";
+  src:
+    url("assets/fonts/handlee-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/handlee-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -----------------------------My Css Begins----------------------------------- */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "HandleRegular", "Courier New", Courier, monospace;
+}
