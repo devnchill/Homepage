@@ -34,6 +34,7 @@ body {
     .hero {
       margin: 5rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       .hero__image {
@@ -42,10 +43,16 @@ body {
         height: auto;
         & > p {
           position: absolute;
+          width: 100%;
           bottom: 0;
           text-align: center;
-          font-size: clamp(2.5rem, 5vw, 5rem);
+          font-size: clamp(2.5rem, 8vw, 5rem);
           color: white;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
         }
       }
       .hero__content {
@@ -112,13 +119,13 @@ body {
   }
   footer {
     .contact {
-      margin: clamp(2rem, 2vw, 5rem);
+      min-height: 300px;
+      margin: clamp(2rem, 2vw, 5rem) clamp(2rem, 2vw, 5rem);
       display: flex;
+      gap: clamp(1.8rem, 5vw, 4rem);
       justify-content: space-around;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      align-items: stretch;
       & > .contact__info {
-        max-width: 30%;
         display: flex;
         flex-direction: column;
         gap: clamp(1.8rem, 5vw, 2.5rem);
@@ -137,6 +144,29 @@ body {
           }
         }
       }
+      & > .contact__image {
+        min-height: 100%;
+        & > img {
+          object-fit: cover;
+          min-height: 100%;
+        }
+      }
     }
+  }
+}
+@media (min-width: 830px) {
+  .contact__info {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 830px) {
+  .contact {
+    flex-wrap: wrap;
+  }
+
+  .contact__info,
+  .contact__image {
+    max-width: 100%;
   }
 }
